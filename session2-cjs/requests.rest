@@ -1,3 +1,15 @@
 GET http://localhost:8082/currencies
 ###
 GET http://localhost:8082/currencies?min_value=0.1
+###
+GET http://localhost:8082/users
+###
+GET http://localhost:8082/users/6607d086-7159-4c26-beb1-280c9f9cbf35
+###
+GET http://localhost:8082/users/search?gender=male
+###
+GET http://localhost:8082/users/search?age=49
+###
+GET http://localhost:8082/users/search?gender=female&age=49
+###
+GET http://localhost:8082/users/search
