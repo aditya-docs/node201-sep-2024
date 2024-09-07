@@ -1,7 +1,18 @@
 const usersJSON = require("../users.json");
 const userSearchSchema = require("../validations/searchUser");
 
-const getUsers = (req, res) => res.send(usersJSON.data);
+const getQueryErrors = (schema, data) => {
+  const result = schema.validate(data);
+  return result.error;
+};
+
+const getUsers = (req, res) => {
+  if (req.headers.authorization === process.env.password)
+    return res.send(usersJSON.data);
+  res
+    .status(401)
+    .send({ message: "You are not authorized to view the resource" });
+};
 
 const getUserById = async (req, res) => {
   const reqUser = usersJSON.data.find(
@@ -16,7 +27,7 @@ const getUserById = async (req, res) => {
 const searchUsers = (req, res) => {
   const { gender, age } = req.query;
 
-  const { error } = userSearchSchema.validate({ gender, age });
+  const error = getQueryErrors(userSearchSchema, { gender, age });
   if (error) return res.status(422).send({ message: error.details[0].message });
 
   // if (gender && !validGenders.includes(gender))

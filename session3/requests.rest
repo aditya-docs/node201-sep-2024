@@ -13,3 +13,6 @@ GET http://localhost:8082/users/search?age=149
 GET http://localhost:8082/users/search?gender=female&age=49
 ###
 GET http://localhost:8082/users/search
+###
+GET http://localhost:8082/users
+Authorization: OpenSesame
