@@ -1,0 +1,30 @@
+GET http://localhost:8082/currencies
+###
+GET http://localhost:8082/currencies?min_value=0.1
+###
+GET http://localhost:8082/users
+###
+GET http://localhost:8082/users/6607d086-7159-4c26-beb1-280c9f9cbf35
+###
+GET http://localhost:8082/users/search?gender=49
+###
+GET http://localhost:8082/users/search?age=149
+###
+GET http://localhost:8082/users/search?gender=female&age=49
+Authorization: OpenSesame
+###
+GET http://localhost:8082/users/search
+Authorization: OpenSesame
+###
+GET http://localhost:8082/users
+Authorization: OpenSesame
+###
+POST http://localhost:8082/blogs/new
+Content-Type: application/json
+
+{
+    "title": "Manali Travel blog",
+    "content": "Manali is a city in the state of Himachal",
+    "author": ["john doe", "jane doe"],
+    "publishedAt": null
+}
