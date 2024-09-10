@@ -23,8 +23,22 @@ POST http://localhost:8082/blogs/new
 Content-Type: application/json
 
 {
-    "title": "Manali Travel blog",
-    "content": "Manali is a city in the state of Himachal",
-    "author": ["john doe", "jane doe"],
-    "publishedAt": null
+    "title": "nice blog"
 }
+
+
+###
+GET http://localhost:8082/blogs
+###
+GET http://localhost:8082/blogs/66e07a907d4a39729751ed24
+###
+PATCH http://localhost:8082/blogs/66e07a907d4a39729751ed24
+Content-Type: application/json
+
+{
+    "title": "Kedarnath blog",
+    "content": "Kedarnath is pilgrimage in Uttarakhand"
+}
+
+###
+DELETE http://localhost:8082/blogs/66e0776fb8836af632702bee

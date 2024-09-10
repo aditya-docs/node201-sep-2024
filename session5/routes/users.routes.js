@@ -6,7 +6,7 @@ const {
 } = require("../controllers/users.controllers");
 const userSearchSchema = require("../validations/searchUser");
 const authorize = require("../middlewares/authorize");
-const queryValidator = require("../middlewares/validator");
+const { queryValidator } = require("../middlewares/validator");
 
 router.use(authorize);
 
