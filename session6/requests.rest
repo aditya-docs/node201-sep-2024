@@ -36,18 +36,18 @@ Content-Type: application/json
 ###
 GET http://localhost:8082/blogs
 ###
-GET http://localhost:8082/blogs/66e07a907d4a39729751ed24
+GET http://localhost:8082/blogs/66e46d460331a125a7291957
 ###
-PATCH http://localhost:8082/blogs/66e07a907d4a39729751ed24
+PATCH http://localhost:8082/blogs/66e46d460331a125a7291957
 Content-Type: application/json
 
 {
-    "title": "Kedarnath blog",
-    "content": "Kedarnath is pilgrimage in Uttarakhand"
+    "title": "Beatles blog",
+    "content": "Beatles was formed in the city of Liverpool"
 }
 
 ###
-DELETE http://localhost:8082/blogs/66e0776fb8836af632702bee
+DELETE http://localhost:8082/blogs/66e46d460331a125a7291957
 
 ###
 GET http://localhost:8082/blogs/search?title=BLOG
