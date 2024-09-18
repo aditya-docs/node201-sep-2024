@@ -6,3 +6,12 @@ Content-Type: application/json
     "username": "cristiano7",
     "password": "siuuuuuuu@7"
 }
+
+###
+POST http://localhost:8082/auth/login
+Content-Type: application/json
+
+{
+    "username": "cristiano7",
+    "password": "siuuuuuuu@7"
+}
