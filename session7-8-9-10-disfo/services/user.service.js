@@ -25,6 +25,15 @@ class UserService {
       throw error;
     }
   };
+
+  findByUserId = async (userId) => {
+    try {
+      const userResult = await Users.findOne({ _id: userId });
+      return userResult;
+    } catch (error) {
+      throw error;
+    }
+  };
 }
 
 module.exports = UserService;

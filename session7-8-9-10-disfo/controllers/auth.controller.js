@@ -7,7 +7,7 @@ const postSignup = async (req, res) => {
     } catch (error) {
         console.log(error)
         res.status(500).send({ message: "Something went wrong!" })
-    } 
+    }
 }
 
 const postLogin = async (req, res) => {
@@ -16,7 +16,7 @@ const postLogin = async (req, res) => {
         if(!isLoggedIn)
             return res.status(401).send({ message: "One of username or password is incorrect" })
         res.cookie("remember_user_token", token, { 
-                maxAge: 15000, 
+                maxAge: 3600000, 
                 httpOnly: true 
             })
             .send({ isLoggedIn })        

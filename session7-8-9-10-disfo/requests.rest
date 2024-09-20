@@ -1,0 +1,32 @@
+POST http://localhost:8082/auth/signup
+Content-Type: application/json
+
+# {
+#     "email": "cr7@goat.com",
+#     "username": "cristiano7",
+#     "password": "siuuuuuuu@7"
+# }
+
+{
+    "email": "lm10@goat.com",
+    "username": "lukamodric10",
+    "password": "luka@10"
+}
+
+###
+POST http://localhost:8082/auth/login
+Content-Type: application/json
+
+# {
+#     "username": "cristiano7",
+#     "password": "siuuuuuuu@7"
+# }
+
+{
+    "username": "lukamodric10",
+    "password": "luka@10"
+}
+
+###
+GET http://localhost:8082/user/lukamodric10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmVkYTk3MzMxY2I5NzE0NjFiNDQ5MTAiLCJpYXQiOjE3MjY4NTE4MzYsImV4cCI6MTcyNjg1MTg2Nn0.YSqHC11wDwmZNjpzZD-CrgU8ZAL9a0hTM0iCmUbcyOA

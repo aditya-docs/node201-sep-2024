@@ -30,7 +30,7 @@ class AuthService {
     // { maxAge: "30m" } // 30 minutes
     // { maxAge: 120 } // 120 seconds
     // { maxAge: "120" } // 120 milliseconds
-    generateJwt = (payload) => jwt.sign(payload, process.env.JWT_SECRET_KEY, { expiresIn: 15 })
+    generateJwt = (payload) => jwt.sign(payload, process.env.JWT_SECRET_KEY, { expiresIn: 30 })
 }
 
 module.exports = AuthService;

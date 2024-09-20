@@ -5,6 +5,7 @@ const {
   getUserByUsername,
 } = require("../controllers/user.controller");
 const { checkAdminKey } = require("../middlewares/admin.middleware");
+const authenticate = require("../middlewares/authenticate.middleware");
 const { userValidationSchema } = require("../validations/user.validator");
 const { validateSchema } = require("../middlewares/validate.middleware");
 
@@ -12,6 +13,6 @@ const validateUser = validateSchema(userValidationSchema);
 
 router.post("/register", validateUser, postRegister);
 router.get("/all", checkAdminKey, getAllUsers);
-router.get("/:username", getUserByUsername);
+router.get("/:username", authenticate, getUserByUsername);
 
 module.exports = router;
